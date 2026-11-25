@@ -79,7 +79,7 @@
     counters.forEach(function (el) {
       if (el.dataset.done) return;
       var r = el.getBoundingClientRect();
-      if (r.top < h * 0.92 && r.bottom > 0) {
+      if (r.top < h - 10 && r.bottom > 0) {
         /* start the whole stat group together */
         var group = el.closest('.stat-panel, .stat-tiles') || el.parentNode;
         group.querySelectorAll('[data-count]').forEach(function (g) { if (!g.dataset.done) run(g); });
